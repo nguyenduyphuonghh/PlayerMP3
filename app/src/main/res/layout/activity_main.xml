@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3b3b3"
+    tools:context=".Activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Ten bai hat"
+        app:navigationIcon="@drawable/icon_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:titleTextColor="#000"
+        android:background="#999"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:layout_alignParentLeft="true"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imgCenter"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/audiopause" />
+    <!--<ImageView-->
+        <!--android:id="@+id/imgCenter"-->
+        <!--android:layout_width="295dp"-->
+        <!--android:layout_height="286dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="95dp"-->
+        <!--android:contentDescription="@string/image_content_description"-->
+        <!--android:src="@drawable/music_is_medicine" />-->
+
+    <TextView
+        android:id="@+id/txtvCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarContent"
+        android:layout_alignStart="@+id/seekBarContent"
+        android:text="@string/time_default"
+        android:layout_alignLeft="@+id/seekBarContent" />
+
+    <TextView
+        android:id="@+id/tvTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarContent"
+        android:layout_alignEnd="@+id/seekBarContent"
+        android:layout_alignRight="@+id/seekBarContent"
+        android:text="@string/time_default" />
+
+    <SeekBar
+        android:id="@+id/seekBarContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayoutControl"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutControl"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#666666"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/btnBackSong"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnBackward"
+            android:layout_toStartOf="@+id/btnBackward"
+            android:contentDescription="@string/image_content_description"
+            app:srcCompat="@android:drawable/ic_media_previous" />
+
+        <ImageView
+            android:id="@+id/btnBackward"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/btnPlay"
+            android:layout_toStartOf="@+id/btnPlay"
+            android:contentDescription="@string/image_content_description"
+            app:srcCompat="@android:drawable/ic_media_rew" />
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/image_content_description"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageView
+            android:id="@+id/btnForward"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/btnPlay"
+            android:layout_toRightOf="@+id/btnPlay"
+            android:contentDescription="@string/image_content_description"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <ImageView
+            android:id="@+id/btnNextSong"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btnForward"
+            android:layout_toRightOf="@+id/btnForward"
+            android:contentDescription="@string/image_content_description"
+            app:srcCompat="@android:drawable/ic_media_next" />
+
+        <Button
+            android:id="@+id/btnRandom"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/btnBackSong"
+            android:layout_alignTop="@+id/btnTimer"
+            android:background="@drawable/random"
+            android:layout_alignLeft="@+id/btnBackSong" />
+
+        <Button
+            android:id="@+id/btnRepeat"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@+id/btnNextSong"
+            android:layout_alignTop="@+id/btnRandom"
+            android:background="@drawable/repeatall"
+            android:layout_alignRight="@+id/btnNextSong" />
+
+        <Button
+            android:id="@+id/btnMinAudio"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/seekBarVolume"
+            android:layout_toEndOf="@+id/btnRandom"
+            android:background="@drawable/muted"
+            android:layout_toRightOf="@+id/btnRandom" />
+
+        <SeekBar
+            android:id="@+id/seekBarVolume"
+            style="@style/Widget.AppCompat.SeekBar"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:max="10"
+            android:progress="10"
+            android:theme="@style/VolumeSeekBarTheme"
+            tools:targetApi="n" />
+
+        <Button
+            android:id="@+id/btnMaxAudio"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/btnMinAudio"
+            android:layout_toStartOf="@+id/btnRepeat"
+            android:background="@drawable/speaker"
+            android:layout_toLeftOf="@+id/btnRepeat" />
+
+        <Button
+            android:id="@+id/btnTimer"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/alarmclock"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp" />
+
+        <Button
+            android:id="@+id/btnMore"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btnTimer"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/ellipsis"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

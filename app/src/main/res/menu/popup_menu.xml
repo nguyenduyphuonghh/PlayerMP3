@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mp_timer"
+        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:title="Change the path (beta)"
+        app:showAsAction="always"/>
+    <item android:id="@+id/infoApp"
+        android:title="Infomation"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="ifRoom"/>
+</menu>
